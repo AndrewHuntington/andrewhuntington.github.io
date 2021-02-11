@@ -7,6 +7,7 @@
       /* GLOBAL STYLES */
       html, body {
         margin: 0;
+        padding: 0;
       }
       h1 {
         font-size: 7vw;
@@ -28,19 +29,21 @@
         color: blue;
         display: inline-block;
         height: 36px;
+        width: 36px;
+      }
+      .social-list {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+      }
+      .social-list > li {  /* > child selector: only applies lis that are direct children of .social-list (deeper child li tags are ignored) */
+        display: inline-block;
       }
 
       /* BIO STYLES */
       .bio-wrapper { /* Parent of bio-box & bio-copy */
         font-size: 24px;
-      }
-      .bio-wrapper:after {
-        visibility: hidden;
-        display: block;
-        font-size: 0;
-        content: " ";
-        clear: both;
-        height: 0;
+        overflow: hidden;
       }
       .bio-box {
         border: 1px solid #000;
@@ -60,14 +63,14 @@
       }
       .bio-copy a {
         color: #008000;
-      }    
+      }
     </style>
   </head>
 
   <body>
     <div class="full-hero hero-home">
       <h1>I'm an h1</h1>
-      <ul>
+      <ul class="social-list">
         <li>
           <a href="https://example.com/" class="social-link">Link</a>
         </li>
