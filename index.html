@@ -26,10 +26,20 @@
       /* SOCIAL STYLES */
       .social-link {
         background: rgba(150, 150, 150, 0.5);
-        color: blue;
+        border-radius: 99px;
+        box-sizing: border-box;
+        color: #fff;
         display: inline-block;
-        height: 36px;
-        width: 36px;
+        font-family: helvetica, arial, sans;
+        font-size: 1rem;
+        font-weight: bold;
+        height: 2.5em;
+        line-height: 1;
+        padding-top: 0.85em;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        width: 2.5em;
       }
       .social-list {
         list-style: none;
@@ -38,23 +48,25 @@
       }
       .social-list > li {  /* > child selector: only applies lis that are direct children of .social-list (deeper child li tags are ignored) */
         display: inline-block;
+        margin: 0 0.5em;
       }
 
       /* BIO STYLES */
       .bio-wrapper { /* Parent of bio-box & bio-copy */
         font-size: 24px;
-        margin: 0 auto 100px;
+        margin: auto;
         max-width: 960px;
         overflow: hidden;
       }
       .bio-box {
         border: 1px solid #000;
+        border-color: black black red;
         box-sizing: border-box; /* Forces all content, padding, and borders to fit in specified width (25%) */
         float: left;
         /* 1: font-size: 1em; */ /* em is relative to parent sizes (here: 1em = 24px) */
         font-size: 1rem; /* rem (root-em): non-cumlative, refs only the html font-size (or browser default if none is specified) */
         margin: 40px 1% 0%;
-        padding: 2%;
+        padding: 0 2% 2%;
         width: 23%;
       }
       .bio-box h3 {
@@ -69,6 +81,7 @@
       .bio-copy {
         /* 1: font-size: 1em; */ /* ems are cumulative: bio-copy refs bio-box which refs bio-wrapper */
         font-size: 1em; /* this refs bio-box (1 rem = 16px), so it is also 16px */
+        line-height: 1.5;
       }
       .bio-copy a {
         color: #008000;
@@ -81,13 +94,13 @@
       <h1>I'm an h1</h1>
       <ul class="social-list">
         <li>
-          <a href="https://example.com/" class="social-link">Link</a>
+          <a href="https://example.com/" class="social-link">Fb</a>
         </li>
         <li>
-          <a href="https://example.com/" class="social-link">Link</a>
+          <a href="https://example.com/" class="social-link">Tw</a>
         </li>
         <li>
-          <a href="https://example.com/" class="social-link">Link</a>
+          <a href="https://example.com/" class="social-link">Gh</a>
         </li>
       </ul>
     </div>
@@ -98,7 +111,7 @@
       <div class="bio-box">
         <img src="https://placekitten.com/g/400/400">
         <h3>Michael Hartl</h3>
-        <a href="https://twitter.com/mhartl" class="social-link">here</a>
+        <a href="https://twitter.com/mhartl" class="social-link">Tw</a>
         <div class="bio-copy">
           <p>
             Known for his dazzling charm, rapier wit, and unrivaled humility,
@@ -118,7 +131,7 @@
       <div class="bio-box">
         <img src="https://placekitten.com/g/400/400">
         <h3>Lee Donahoe</h3>
-        <a href="https://twitter.com/leedonahoe" class="social-link">here</a>
+        <a href="https://twitter.com/leedonahoe" class="social-link">Tw</a>
         <div class="bio-copy">
           <p>
             When he's not literally swimming with sharks or hunting powder
@@ -131,7 +144,7 @@
       <div class="bio-box">
         <img src="https://placekitten.com/g/400/400">
         <h3>Nick Merwin</h3>
-        <a href="https://twitter.com/nickmerwin" class="social-link">here</a>
+        <a href="https://twitter.com/nickmerwin" class="social-link">Tw</a>
         <div class="bio-copy">
           <p>
             You may have seen him shredding guitar live with Capital Cities on
