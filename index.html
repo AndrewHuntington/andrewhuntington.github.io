@@ -43,6 +43,8 @@
       /* BIO STYLES */
       .bio-wrapper { /* Parent of bio-box & bio-copy */
         font-size: 24px;
+        margin: 0 auto 100px;
+        max-width: 960px;
         overflow: hidden;
       }
       .bio-box {
@@ -51,11 +53,18 @@
         float: left;
         /* 1: font-size: 1em; */ /* em is relative to parent sizes (here: 1em = 24px) */
         font-size: 1rem; /* rem (root-em): non-cumlative, refs only the html font-size (or browser default if none is specified) */
+        margin: 40px 1% 0%;
         padding: 2%;
-        width: 25%;
+        width: 23%;
       }
       .bio-box h3 {
+        color: #fff;
         font-size: 1.5em; /* since .bio-box has a font-size of 1rem (16px default), this will be 24px */
+        margin: -40px 0 1em;
+        text-align: center;
+      }
+      .bio-box img {
+        width: 100%;
       }
       .bio-copy {
         /* 1: font-size: 1em; */ /* ems are cumulative: bio-copy refs bio-box which refs bio-wrapper */
@@ -87,6 +96,7 @@
 
     <div class="bio-wrapper">
       <div class="bio-box">
+        <img src="https://placekitten.com/g/400/400">
         <h3>Michael Hartl</h3>
         <a href="https://twitter.com/mhartl" class="social-link">here</a>
         <div class="bio-copy">
@@ -106,6 +116,7 @@
         </div>
       </div>
       <div class="bio-box">
+        <img src="https://placekitten.com/g/400/400">
         <h3>Lee Donahoe</h3>
         <a href="https://twitter.com/leedonahoe" class="social-link">here</a>
         <div class="bio-copy">
@@ -118,6 +129,7 @@
         </div>
       </div>
       <div class="bio-box">
+        <img src="https://placekitten.com/g/400/400">
         <h3>Nick Merwin</h3>
         <a href="https://twitter.com/nickmerwin" class="social-link">here</a>
         <div class="bio-copy">
@@ -130,6 +142,7 @@
         </div>
       </div>
       <div class="bio-box">
+        <img src="https://placekitten.com/g/400/400">
         <h3>??</h3>
         <p>
           The Future
