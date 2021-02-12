@@ -1,0 +1,85 @@
+/* GLOBAL STYLES */
+body {
+  font-family: helvetica, arial, sans;
+}
+h1 {
+  font-size: 7vw;
+  margin-top: 0;
+}
+a {
+  color: #f00;
+}
+
+/* HERO STYLES */
+.full-hero {
+  background-color: #c7dbfc;
+  height: 50vh;
+}
+
+/* SOCIAL STYLES */
+.social-link {
+  background: rgba(150, 150, 150, 0.5);
+  border-radius: 99px;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-family: helvetica, arial, sans;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 2.5em;
+  line-height: 1;
+  padding-top: 0.85em;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  width: 2.5em;
+}
+.social-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.social-list > li {  /* > child selector: only applies lis that are direct children of .social-list (deeper child li tags are ignored) */
+  display: inline-block;
+  margin: 0 0.5em;
+}
+
+/* BIO STYLES */
+.bio-wrapper { /* Parent of bio-box & bio-copy */
+  font-size: 24px;
+  margin: auto;
+  max-width: 960px;
+  overflow: hidden;
+}
+.bio-box {
+  border: 1px solid #000;
+  border-color: black black red;
+  box-sizing: border-box; /* Forces all content, padding, and borders to fit in specified width (25%) */
+  float: left;
+  /* 1: font-size: 1em; */ /* em is relative to parent sizes (here: 1em = 24px) */
+  font-size: 1rem; /* rem (root-em): non-cumlative, refs only the html font-size (or browser default if none is specified) */
+  margin: 40px 1% 0%;
+  padding: 0 2% 2%;
+  width: 23%;
+}
+.bio-box h3 {
+  color: #fff;
+  font-size: 1.5em; /* since .bio-box has a font-size of 1rem (16px default), this will be 24px */
+  margin: -40px 0 1em;
+  text-align: center;
+}
+.bio-box img {
+  width: 100%;
+}
+.bio-box .social-link {
+  display: block;
+  margin: 2em 0 1em;
+}
+.bio-copy {
+  /* 1: font-size: 1em; */ /* ems are cumulative: bio-copy refs bio-box which refs bio-wrapper */
+  font-size: 1em; /* this refs bio-box (1 rem = 16px), so it is also 16px */
+  line-height: 1.5;
+}
+.bio-copy a {
+  color: #008000;
+}
