@@ -75,13 +75,15 @@ h2 ~ p { /* ~: (the general sibling) applies to all p tags preceded by an h2 */
 }
 .header-nav a {
   color: #fff;
+}
+.nav-links a {
   font-size: 0.8rem;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
 }
-.header-nav a:hover,
-.header-nav a:active {
+.nav-links a:hover,
+.nav-links a:active {
   color: #ed6e2f;
 }
 .header-nav > li:first-child a {
@@ -91,6 +93,31 @@ h2 ~ p { /* ~: (the general sibling) applies to all p tags preceded by an h2 */
   color: #fff;
 }
 
+/* FOOTER STLYES */
+.footer {
+  background-color: #000;
+  padding: 10vh 0 15vh;
+  text-align: center;
+}
+.footer-logo img {
+  width: 50px;
+}
+.footer h3 {
+  color: #fff;
+  padding-top: 1.5em;
+  text-transform: uppercase;
+}
+.footer h3 span {
+  color: #aaa;
+}
+.footer-nav li {
+  display: inline-block;
+  margin: 2em 1em 0;
+}
+.footer-nav a {
+  color: #ccc;
+}
+
 /* HERO STYLES */
 .full-hero {
   background-color: #c7dbfc;
@@ -98,6 +125,11 @@ h2 ~ p { /* ~: (the general sibling) applies to all p tags preceded by an h2 */
 }
 
 /* SOCIAL STYLES */
+.social-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
 .social-link {
   background: rgba(150, 150, 150, 0.5);
   border-radius: 99px;
@@ -115,11 +147,6 @@ h2 ~ p { /* ~: (the general sibling) applies to all p tags preceded by an h2 */
   vertical-align: middle;
   width: 2.5em;
 }
-.social-list {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-}
 .social-list > li {  /* > child selector: only applies lis that are direct children of .social-list (deeper child li tags are ignored) */
   display: inline-block;
   margin: 0 0.5em;
@@ -134,13 +161,12 @@ h2 ~ p { /* ~: (the general sibling) applies to all p tags preceded by an h2 */
 }
 .bio-box {
   border: 1px solid #000;
-  border-color: black black red;
   box-sizing: border-box; /* Forces all content, padding, and borders to fit in specified width (25%) */
   float: left;
   /* 1: font-size: 1em; */ /* em is relative to parent sizes (here: 1em = 24px) */
   font-size: 1rem; /* rem (root-em): non-cumlative, refs only the html font-size (or browser default if none is specified) */
   margin: 40px 1% 0%;
-  padding: 0 2% 2%;
+  padding: 2%;
   width: 23%;
 }
 .bio-box h3 {
@@ -159,7 +185,6 @@ h2 ~ p { /* ~: (the general sibling) applies to all p tags preceded by an h2 */
 .bio-copy {
   /* 1: font-size: 1em; */ /* ems are cumulative: bio-copy refs bio-box which refs bio-wrapper */
   font-size: 1em; /* this refs bio-box (1 rem = 16px), so it is also 16px */
-  line-height: 1.5;
 }
 .bio-copy a {
   color: #008000;
