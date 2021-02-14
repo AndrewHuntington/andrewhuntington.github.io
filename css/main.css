@@ -10,6 +10,7 @@ body {
   min-height: 100vh;
 }
 .content-container {
+  display: flex;
   flex: 1 1 auto; /* flex: <flex-grow> <flex-shrink> <flex-basis> */
   padding-top: 10vh;
   width: 100%;
@@ -131,6 +132,28 @@ h2 ~ p { /* ~: (the general sibling) applies to all p tags preceded by an h2 */
 }
 .footer-nav a {
   color: #ccc;
+}
+
+/* COLUMN STYLES */
+.col-three {
+  display: flex;
+  flex: 1;
+}
+.col {
+  box-sizing: border-box;
+  padding: 2em;
+}
+.col-three .col ~ .col {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.col-three .col-nav {
+  flex: 0 1 15em;
+}
+.col-three .col-content {
+  flex: 1;
+}
+.col-three .col-aside {
+  flex: 0 1 20em;
 }
 
 /* HERO STYLES */
@@ -273,4 +296,41 @@ h2 ~ p { /* ~: (the general sibling) applies to all p tags preceded by an h2 */
 .bio-copy {
   /* 1: font-size: 1em; */ /* ems are cumulative: bio-copy refs bio-box which refs bio-wrapper */
   font-size: 0.75em; /* this refs bio-box (1 rem = 16px), so it is also 16px */
+}
+
+/* GALLERY STYLES */
+.gallery-thumbs {
+  height: 90vh;
+  overflow: scroll;
+}
+.gallery-thumbs > div {
+  cursor: pointer;
+}
+.gallery-thumbs img {
+  box-sizing: border-box;
+  box-shadow: 0 0 0 5px transparent;
+  display: inline-block;
+  margin: 0 0 10px;
+  opacity: 0.5;
+  transition: all 0.5s ease-in-out; /* works with the below :hover */
+  width: 100%;
+}
+.gallery-thumbs img:hover {
+  opacity: 1;
+}
+.gallery-thumbs .current img {
+  box-shadow: 0 0 0 5px #ed6e2f;
+  opacity: 1;
+}
+.gallery-photo {
+  position: relative;
+}
+.gallery-photo img {
+  width: 100%;
+}
+.gallery-info {
+  font-size: 0.8rem;
+}
+.gallery-info h3 {
+  margin-bottom: 1em;
 }
