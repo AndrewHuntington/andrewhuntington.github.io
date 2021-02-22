@@ -4,7 +4,7 @@ title: This is the title of the fourth post
 postHero: https://placekitten.com/g/400/200
 author: Dr. Bob
 authorTwitter: https://twitter.com/mhartl
-gravatar: https://placekitten.com/g/400/200
+gravatar: https://placekitten.com/g/400/400
 postFooter: Additional information, and maybe a <a href="#">link or two</a>
 ---
 
