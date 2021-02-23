@@ -6,7 +6,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  font-family: helvetica, arial, sans;
+  font-family: 'Open Sans', helvetica, arial, sans;
   min-height: 100vh;
 }
 .content-container {
@@ -14,6 +14,10 @@ body {
   flex: 1 1 auto; /* flex: <flex-grow> <flex-shrink> <flex-basis> */
   padding-top: 10vh;
   width: 100%;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Raleway', helvetica, sans;
+  font-weight: 100;
 }
 h1 {
   font-size: 7vw;
@@ -354,15 +358,15 @@ h2 ~ p { /* ~: (the general sibling) applies to all p tags preceded by an h2 */
   color: #fff;
   display: inline-block;
   font-family: helvetica, arial, sans;
-  font-size: 1em;
+  font-size: 1.7em;
   font-weight: bold;
-  height: 2.5em;
+  height: 1.5em;
   line-height: 1;
-  padding-top: 0.85em;
+  padding-top: 0.25em;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-  width: 2.5em;
+  width: 1.5em;
 }
 .social-list > li {  /* > child selector: only applies lis that are direct children of .social-list (deeper child li tags are ignored) */
   display: inline-block;
@@ -432,6 +436,7 @@ h2 ~ p { /* ~: (the general sibling) applies to all p tags preceded by an h2 */
 }
 .bio-box h3 {
   color: #fff;
+  font-family: 'Shippori Mincho B1', serif;
   font-size: 1.5em; /* since .bio-box has a font-size of 1rem (16px default), this will be 24px */
   margin: -40px 0 1em;
   text-align: center;
