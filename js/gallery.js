@@ -8,11 +8,15 @@ function activateGallery() {
   // Set clicked image as main image.
   thumbnails.forEach(function(thumbnail) {
     thumbnail.addEventListener("click", function() {
+      // Set clicked image as display image.
       let newImageSrc = thumbnail.dataset.largeVersion;
-      let newImageAlt = thumbnail.alt
-
       mainImage.setAttribute("src", newImageSrc);
-      mainImage.setAttribute("alt", newImageAlt);
+      mainImage.setAttribute("alt", thumbnail.alt);
+
+      // Change which image is current.
+      let currentClass = "current";
+      document.querySelector(`.${currentClass}`).classList.remove(currentClass);
+      thumbnail.parentNode.classList.add(currentClass);
     });
   });
 }
